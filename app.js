@@ -5,5 +5,8 @@ var messages = new ChatMessages([
   {author: 'me', text: 'Finally, bake for 10 minutes.', time: now}
 ]);
 
-var view = new ChatMessagesView({collection: messages});
-$('.chat-messages-wrapper').append(view.render().$el);
+var view1 = new ChatMessagesView({collection: messages});
+$('.chat-messages-wrapper').append(view1.render().$el);
+
+var view2 = new ChatFormView({collection: messages});
+$('.chat-form-wrapper').append(view2.render().$el);
